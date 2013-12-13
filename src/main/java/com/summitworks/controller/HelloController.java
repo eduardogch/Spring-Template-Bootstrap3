@@ -1,4 +1,4 @@
-package com.summitworks.common.controller;
+package com.summitworks.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

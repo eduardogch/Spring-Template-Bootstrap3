@@ -3,11 +3,11 @@
 <html lang="en">
 <head>
 <!-- HEAD -->
-<c:import url="/WEB-INF/tags/head.jsp" />
+<c:import url="/WEB-INF/jsp/template/head.jsp" />
 </head>
 <body>
 	<!-- NAVBAR -->
-	<c:import url="/WEB-INF/tags/navbar.jsp" />
+	<c:import url="/WEB-INF/jsp/template/navbar.jsp" />
 
 	<!-- CONTAINER -->
 	<div class="container theme-showcase">
@@ -19,7 +19,7 @@
 				CRUD WebAPP. It coding in Java Server Pages (JSP) and Servles with
 				the design pattern Model-View-Controller (MVC).</p>
 			<p>
-				<a href="<c:url value='/login' />" class="btn btn-primary btn-lg"
+				<a href="<c:url value='/welcome' />" class="btn btn-primary btn-lg"
 					role="button">Go to WebApp &raquo;</a>
 			</p>
 		</div>
@@ -74,7 +74,7 @@
 		</div>
 
 		<!-- FOOTER -->
-		<c:import url="/WEB-INF/tags/footer.jsp" />
+		<c:import url="/WEB-INF/jsp/template/footer.jsp" />
 	</div>
 </body>
 </html>

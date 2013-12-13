@@ -1,4 +1,4 @@
-package com.summitworks.common.model;
+package com.summitworks.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
