@@ -19,7 +19,7 @@
 				CRUD WebAPP. It coding in Java Server Pages (JSP) and Servles with
 				the design pattern Model-View-Controller (MVC).</p>
 			<p>
-				<a href="<c:url value='/welcome' />" class="btn btn-primary btn-lg"
+				<a href="<c:url value='/login' />" class="btn btn-primary btn-lg"
 					role="button">Go to WebApp &raquo;</a>
 			</p>
 		</div>

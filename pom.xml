@@ -21,6 +21,7 @@
 		<!-- Spring -->
 		<spring-framework.version>3.2.5.RELEASE</spring-framework.version>
 		<spring-data-jpa.version>1.4.2.RELEASE</spring-data-jpa.version>
+		<spring-security.version>3.1.4.RELEASE</spring-security.version>
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
@@ -65,6 +66,19 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
 			<version>${spring-framework.version}</version>
+		</dependency>
+		
+		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring-security.version}</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring-security.version}</version>
 		</dependency>
 
 		<!-- Other Web dependencies -->

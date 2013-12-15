@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!-- Fixed navbar -->
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -8,7 +10,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/Spring-Hibernate-Maven">Login and CRUD WebApp</a>
+            <a class="navbar-brand" href="<c:url value='/' />">Login and CRUD WebApp</a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
