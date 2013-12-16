@@ -11,7 +11,7 @@
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring/root-dispatcher-servlet.xml, classpath:spring/spring-security-config.xml</param-value>
+		<param-value>classpath:spring/main-dispatcher-servlet.xml, classpath:spring/spring-security-config.xml</param-value>
 	</context-param>
 
 	<listener>

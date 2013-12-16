@@ -65,10 +65,6 @@ body {
 			<h2 class="form-signin-heading">Please sign in</h2>
 			<input type="text" name='j_username' class="form-control" placeholder="Email address" required autofocus> 
 			<input type="password" name='j_password' class="form-control" placeholder="Password" required> 
-			
-			<label class="checkbox"> <input type="checkbox" name="_spring_security_remember_me" value="remember-me">
-				Remember me
-			</label>
 			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 		</form>
 

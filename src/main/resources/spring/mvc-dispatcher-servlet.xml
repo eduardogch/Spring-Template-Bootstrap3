@@ -14,6 +14,9 @@
         http://www.springframework.org/schema/tx 
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 
+	<!-- DataSource definition -->
+	<import resource="spring-datasource-config.xml" />
+
 	<!-- Mapping Controllers -->
 	<context:annotation-config />
 	<context:component-scan base-package="com.summitworks" />
@@ -29,36 +32,6 @@
 			value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix" value="/WEB-INF/jsp/" />
 		<property name="suffix" value=".jsp" />
-	</bean>
-
-	<!-- DataBase ORM -->
-	<context:property-placeholder location="classpath:db/data-access.properties"
-		system-properties-mode="OVERRIDE" />
-
-	<!-- enables scanning for @Transactional annotations -->
-	<tx:annotation-driven />
-
-	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
-		p:driverClassName="${jdbc.driverClassName}" p:url="${jdbc.url}"
-		p:username="${jdbc.username}" p:password="${jdbc.password}" />
-
-	<bean id="sessionFactory"
-		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="configLocation">
-			<value>classpath:db/hibernate.cfg.xml</value>
-		</property>
-		<property name="hibernateProperties">
-			<props>
-				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
-				<prop key="hibernate.show_sql">true</prop>
-			</props>
-		</property>
-	</bean>
-
-	<bean id="transactionManager"
-		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
-		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
 
 </beans>
