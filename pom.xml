@@ -141,6 +141,13 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
+		
+		<!-- ORACLE database driver -->
+		<dependency>
+			<groupId>com.oracle</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.4</version>
+		</dependency>
 
 		<!-- Database connection pool - Tomcat-jdbc is best than common-jdbc -->
 		<dependency>
