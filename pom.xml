@@ -23,8 +23,9 @@
 		<spring-data-jpa.version>1.4.2.RELEASE</spring-data-jpa.version>
 		<spring-security.version>3.1.4.RELEASE</spring-security.version>
 
-		<!-- Hibernate / JPA -->
+		<!-- Hibernate -->
 		<hibernate.version>4.2.1.Final</hibernate.version>
+		<hibernate-validator.version>5.0.2.Final</hibernate-validator.version>
 
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
@@ -67,14 +68,14 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring-framework.version}</version>
 		</dependency>
-		
+
 		<!-- Spring Security -->
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-web</artifactId>
 			<version>${spring-security.version}</version>
 		</dependency>
- 
+
 		<dependency>
 			<groupId>org.springframework.security</groupId>
 			<artifactId>spring-security-config</artifactId>
@@ -117,8 +118,21 @@
 		<!-- Hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- Hibernate validator -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate-validator.version}</version>
 		</dependency>
 
 		<!-- Test Artifacts -->
@@ -141,7 +155,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.version}</version>
 		</dependency>
-		
+
 		<!-- ORACLE database driver -->
 		<dependency>
 			<groupId>com.oracle</groupId>

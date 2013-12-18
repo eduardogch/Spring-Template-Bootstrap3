@@ -1,4 +1,5 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 <meta name="author" content="Eduardo Gonzalez">
 <link rel="shortcut icon" href="<c:url value='/resources/icon/favicon.png' />">
 
-<title>Login and CRUD web aplication in Bootstrap</title>
+<title><spring:message code="main.title"/></title>
 
 <!-- Bootstrap core CSS -->
 <link href="<c:url value='/resources/css/bootstrap.css' />" rel="stylesheet"/>

@@ -7,11 +7,14 @@
 	<description>This is a template for a simple and informational Login and CRUD WebAPP.</description>
 
 	<!-- - Location of the XML file that defines the root application context. 
-		- Applied by ContextLoaderListener. -->
+		 - Applied by ContextLoaderListener. -->
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
-		<param-value>classpath:spring/main-dispatcher-servlet.xml, classpath:spring/spring-security-config.xml</param-value>
+		<param-value>
+			classpath:spring/main-dispatcher-servlet.xml, 
+			classpath:spring/spring-security-config.xml
+		</param-value>
 	</context-param>
 
 	<listener>
@@ -40,7 +43,7 @@
 		<filter-name>springSecurityFilterChain</filter-name>
 		<filter-class>
                   org.springframework.web.filter.DelegatingFilterProxy
-                </filter-class>
+        </filter-class>
 	</filter>
  
 	<filter-mapping>

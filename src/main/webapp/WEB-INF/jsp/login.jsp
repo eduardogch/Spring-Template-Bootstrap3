@@ -1,6 +1,9 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <!-- HEAD -->
 <c:import url="/WEB-INF/jsp/template/head.jsp" />
@@ -42,10 +45,9 @@ body {
 }
 .errorblock {
 	color: #ff0000;
+	font-size: 13px;
 	background-color: #ffEEEE;
 	border: 3px solid #ff0000;
-	padding: 8px;
-	margin: 16px;
 }
 </style>
 </head>
@@ -55,17 +57,17 @@ body {
 	<div class="container theme-showcase">
 	
 	<c:if test="${not empty error}">
-		<div class="errorblock">
+		<div class="errorblock form-signin">
 			Your login attempt was not successful, try again.<br /> Caused :
 			${sessionScope["SPRING_SECURITY_LAST_EXCEPTION"].message}
 		</div>
 	</c:if>
 	
 		<form class="form-signin" role="form" action="<c:url value='j_spring_security_check' />" method='POST'>
-			<h2 class="form-signin-heading">Please sign in</h2>
-			<input type="text" name='j_username' class="form-control" placeholder="Email address" required autofocus> 
-			<input type="password" name='j_password' class="form-control" placeholder="Password" required> 
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<h2 class="form-signin-heading"><spring:message code="login.title"/></h2>
+			<input type="text" name='j_username' class="form-control" placeholder="<spring:message code="login.username"/>" required autofocus> 
+			<input type="password" name='j_password' class="form-control" placeholder="<spring:message code="login.password"/>" required> 
+			<button class="btn btn-lg btn-primary btn-block" type="submit"><spring:message code="login.button.login"/></button>
 		</form>
 
 	</div>

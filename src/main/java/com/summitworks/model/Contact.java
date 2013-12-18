@@ -6,6 +6,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 @Entity
 @Table(name = "CONTACTS")
 public class Contact {
@@ -15,15 +17,19 @@ public class Contact {
 	@GeneratedValue
 	private Integer id;
 
+	@NotEmpty
 	@Column(name = "FIRSTNAME")
 	private String firstname;
 
+	@NotEmpty
 	@Column(name = "LASTNAME")
 	private String lastname;
 
+	@NotEmpty
 	@Column(name = "EMAIL")
 	private String email;
 
+	@NotEmpty
 	@Column(name = "TELEPHONE")
 	private String telephone;
 

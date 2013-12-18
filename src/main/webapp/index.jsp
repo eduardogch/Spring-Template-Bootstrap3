@@ -20,7 +20,9 @@
 				the design pattern Model-View-Controller (MVC).</p>
 			<p>
 				<a href="<c:url value='/login' />" class="btn btn-primary btn-lg"
-					role="button">Go to WebApp &raquo;</a>
+					role="button">Login page &raquo;</a> 
+				<a href="<c:url value='/welcome' />" class="btn btn-warning btn-lg"
+					role="button">Welcome page &raquo;</a>
 			</p>
 		</div>
 

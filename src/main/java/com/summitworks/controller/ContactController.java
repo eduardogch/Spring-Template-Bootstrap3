@@ -1,9 +1,10 @@
 package com.summitworks.controller;
 
-import java.util.Map;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,36 +15,48 @@ import com.summitworks.model.Contact;
 import com.summitworks.service.ContactService;
 
 @Controller
+@RequestMapping("/contact")
 public class ContactController {
 
 	@Autowired
 	private ContactService contactService;
 
-	@RequestMapping("/contact")
-	public String listContacts(Map<String, Object> map) {
+	// Main page with contact's info list
+	@RequestMapping(method = RequestMethod.GET)
+	public String listContact(ModelMap model) {
 
-		map.put("contact", new Contact());
-		map.put("contactList", contactService.listContact());
-
-		return "contact";
+		model.addAttribute("contact", new Contact());
+		model.addAttribute("contactList", contactService.listContact());
+		return "contact/list";
 	}
 
+	// Page who show a form to add a contact
+	@RequestMapping(value = "/add", method = RequestMethod.GET)
+	public String addContactGet(ModelMap model) {
+
+		model.addAttribute("contact", new Contact());
+		return "contact/add";
+	}
+
+	// Page show after to added a contact
 	@RequestMapping(value = "/add", method = RequestMethod.POST)
-	public String addContact(@ModelAttribute("contact") Contact contact,
+	public String addContactPost(
+			@Valid @ModelAttribute("contact") Contact contact,
 			BindingResult result) {
 
-		contactService.addContact(contact);
-
-		return "redirect:/contact";
+		if (!result.hasErrors()) {
+			contactService.addContact(contact);
+			return "redirect:/contact";
+		} else {
+			return "contact/add";
+		}
 	}
-	
+
+	// Method who delete a contact with his ID
 	@RequestMapping("/delete/{contactId}")
-	public String deleteContact(@PathVariable("contactId")
-	Integer contactId) {
+	public String deleteContact(@PathVariable("contactId") Integer contactId) {
 
 		contactService.removeContact(contactId);
-
 		return "redirect:/contact";
 	}
-
 }
