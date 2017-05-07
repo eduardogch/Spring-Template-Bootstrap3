@@ -13,6 +13,8 @@ It coding in Spring-Hibernate-Maven using database like MySQL and Oracle 10g wit
 - Hibernate validator:5.4.1 Final
 - Mysql Connector J:6.0.6
 
+- Bootstrap:3.0.3
+- Jquery:1.10.2
 
 #### update:2017/5/7
 =======================================================================
