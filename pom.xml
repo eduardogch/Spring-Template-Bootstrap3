@@ -1,31 +1,31 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.springframework.samples.service.service</groupId>
-	<artifactId>Spring-Simple</artifactId>
+	<groupId>com.leadnt</groupId>
+	<artifactId>Spring-Web-Boot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<properties>
 
 		<!-- Generic properties -->
-		<java.version>1.6</java.version>
+		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 		<!-- Web -->
 		<jsp.version>2.2</jsp.version>
 		<jstl.version>1.2</jstl.version>
-		<servlet.version>2.5</servlet.version>
+		<servlet.version>3.1.0</servlet.version>
 
 		<!-- Spring -->
-		<spring-framework.version>3.2.5.RELEASE</spring-framework.version>
-		<spring-data-jpa.version>1.4.2.RELEASE</spring-data-jpa.version>
-		<spring-security.version>3.1.4.RELEASE</spring-security.version>
+		<spring-framework.version>4.3.8.RELEASE</spring-framework.version>
+		<spring-data-jpa.version>1.11.3.RELEASE</spring-data-jpa.version>
+		<spring-security.version>4.2.2.RELEASE</spring-security.version>
 
 		<!-- Hibernate -->
-		<hibernate.version>4.2.1.Final</hibernate.version>
-		<hibernate-validator.version>5.0.2.Final</hibernate-validator.version>
+		<hibernate.version>5.2.10.Final</hibernate.version>
+		<hibernate-validator.version>5.4.1.Final</hibernate-validator.version>
 
 		<!-- Logging -->
 		<logback.version>1.0.13</logback.version>
@@ -35,14 +35,20 @@
 		<junit.version>4.11</junit.version>
 
 		<!-- Database access -->
-		<mysql.version>5.1.22</mysql.version>
-		<tomcat-jdbc.version>7.0.42</tomcat-jdbc.version>
+		<mysql.version>6.0.6</mysql.version>
+		<tomcat-jdbc.version>9.0.0.M20</tomcat-jdbc.version>
+		<jackson.version>1.9.10</jackson.version>
 
 	</properties>
 
 	<dependencies>
 
 		<!-- SPRING, SPRING, SPRINGITY SPRING -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-framework.version}</version>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
@@ -90,7 +96,7 @@
 		</dependency>
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
+			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
 		</dependency>
@@ -156,12 +162,6 @@
 			<version>${mysql.version}</version>
 		</dependency>
 
-		<!-- ORACLE database driver -->
-		<dependency>
-			<groupId>com.oracle</groupId>
-			<artifactId>ojdbc6</artifactId>
-			<version>11.2.0.4</version>
-		</dependency>
 
 		<!-- Database connection pool - Tomcat-jdbc is best than common-jdbc -->
 		<dependency>
@@ -171,5 +171,25 @@
 			<scope>runtime</scope>
 		</dependency>
 
+		<!-- Jackson JSON Mapper -->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.7.6</version>
+		</dependency>
+
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

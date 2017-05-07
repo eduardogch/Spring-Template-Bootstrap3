@@ -13,13 +13,15 @@
 <!-- CONTAINER -->
 	<div class="container theme-showcase">
 	
-		<p>Message :<h1>${message}</h1></p>
+		<p>Message :<h1><spring:message code="welcome.springmvc" text="default text"/> </h1></p>
 	
 		Language :
-		<a href="?lang=en">English</a> | <a href="?lang=es">Español</a>
+		<a href="?lang=en">English</a> | <a href="?lang=es">Español</a> | <a href="?lang=zh_CN">简体中文</a>
 	
 		<h3>
 			Label from a string's file : <spring:message code="welcome.springmvc" text="default text" />
+			<br/>
+			${message}
 		</h3>
 	
 		Current Locale : ${pageContext.response.locale}

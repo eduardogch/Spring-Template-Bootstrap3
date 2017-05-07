@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 
@@ -22,7 +23,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"><spring:message code="navbar.list4"/> <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="?lang=en">English</a></li>
-                        <li><a href="?lang=es">Espa�ol</a></li>
+                        <li><a href="?lang=zh_CN">中文</a></li>
+                        <li><a href="?lang=es">Español</a></li>
                     </ul>
                 </li>
             </ul>
