@@ -1,8 +1,8 @@
-package com.summitworks.service;
+package com.leadnt.service;
 
 import java.util.List;
 
-import com.summitworks.model.Contact;
+import com.leadnt.model.Contact;
 
 public interface ContactService {
 	

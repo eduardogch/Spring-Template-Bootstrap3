@@ -1,8 +1,8 @@
-package com.summitworks.repository;
+package com.leadnt.repository;
 
 import java.util.List;
 
-import com.summitworks.model.Contact;
+import com.leadnt.model.Contact;
 
 public interface ContactRepository {
 	

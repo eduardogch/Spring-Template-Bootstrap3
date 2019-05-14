@@ -1,4 +1,4 @@
-package com.summitworks.test;
+package com.leadnt.test;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;

@@ -1,4 +1,4 @@
-package com.summitworks.service;
+package com.leadnt.service;
 
 import java.util.List;
 
@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.summitworks.model.Contact;
-import com.summitworks.repository.ContactRepository;
+import com.leadnt.model.Contact;
+import com.leadnt.repository.ContactRepository;
 
 @Service
 public class ContactServiceImpl implements ContactService {

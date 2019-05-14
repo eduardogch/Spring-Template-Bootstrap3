@@ -1,4 +1,4 @@
-package com.summitworks.controller;
+package com.leadnt.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;

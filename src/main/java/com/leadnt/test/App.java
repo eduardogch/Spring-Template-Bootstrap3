@@ -1,8 +1,8 @@
-package com.summitworks.test;
+package com.leadnt.test;
 
 import org.hibernate.Session;
 
-import com.summitworks.model.Contact;
+import com.leadnt.model.Contact;
 
 public class App {
 
