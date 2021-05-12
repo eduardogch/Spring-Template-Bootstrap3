@@ -21,7 +21,7 @@
 		<!-- Spring -->
 		<spring-framework.version>4.3.8.RELEASE</spring-framework.version>
 		<spring-data-jpa.version>1.11.3.RELEASE</spring-data-jpa.version>
-		<spring-security.version>4.2.2.RELEASE</spring-security.version>
+		<spring-security.version>5.2.10.RELEASE</spring-security.version>
 
 		<!-- Hibernate -->
 		<hibernate.version>5.2.10.Final</hibernate.version>
