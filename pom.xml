@@ -19,7 +19,7 @@
 		<servlet.version>3.1.0</servlet.version>
 
 		<!-- Spring -->
-		<spring-framework.version>4.3.8.RELEASE</spring-framework.version>
+		<spring-framework.version>5.2.20.RELEASE</spring-framework.version>
 		<spring-data-jpa.version>1.11.3.RELEASE</spring-data-jpa.version>
 		<spring-security.version>4.2.2.RELEASE</spring-security.version>
 
